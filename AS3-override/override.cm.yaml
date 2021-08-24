@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: as3override-cm
+  namespace: projectone
+  labels:
+    f5type: virtual-server
+    overrideAS3: "true"
+data:
+  template: |
+    {
+        "declaration": {
+            "CIS1": {
+                "Shared": {
+                    "ingress_projectone_ngxdcnp": {
+                        "monitors": [ "icmp" ]
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cis-ing
+  namespace: projectone
+  annotations:
+    virtual-server.f5.com/ip: "10.0.1.9"
+    virtual-server.f5.com/http-port: "80"
+spec:
+  ingressClassName: f5
+  rules:
+  - host: web.aditf5.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ngxdcnp
+            port:
+              number: 8080
+  - host: api.aditf5.com
+    http:
+      paths:
+      - path: /webpath
+        pathType: Prefix
+        backend:
+          service:
+            name: ngxdcnp
+            port:
+              number: 8080
