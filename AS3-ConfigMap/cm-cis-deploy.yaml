@@ -32,7 +32,7 @@ spec:
             - "--insecure=true"
             - "--node-label-selector=node-role.kubernetes.io/worker"
             - "--hubmode=false"
-            - "--manage-ingress=true"
+            - "--manage-configmaps=true"
             - "--namespace=projectone"
             - "--log-level=DEBUG"
           command: 

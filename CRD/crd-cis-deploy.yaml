@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: k8s-bigip-ctlr-cm-deployment
+  name: k8s-bigip-ctlr-deployment
   namespace: kube-system
 spec: 
   progressDeadlineSeconds: 600
@@ -9,7 +9,7 @@ spec:
   revisionHistoryLimit: 10
   selector: 
     matchLabels: 
-      app: k8s-bigip-ctlr-cm
+      app: k8s-bigip-ctlr
   strategy: 
     rollingUpdate: 
       maxSurge: 1
@@ -18,8 +18,8 @@ spec:
   template: 
     metadata: 
       labels: 
-        app: k8s-bigip-ctlr-cm
-      name: k8s-bigip-ctlr-cm
+        app: k8s-bigip-ctlr
+      name: k8s-bigip-ctlr
     spec: 
       containers: 
         - 
@@ -30,13 +30,8 @@ spec:
             - "--bigip-partition=CIS1"
             - "--pool-member-type=nodeport"
             - "--insecure=true"
+            - "--custom-resource-mode=true"
             - "--node-label-selector=node-role.kubernetes.io/worker"
-            - "--hubmode=false"
-            - "--kubeconfig=/home/adit/.kube/config"
-            - "--manage-ingress=true"
-            - "--override-as3-declaration=projectone/as3override-cm"
-            - "--namespace=projectone"
-            - "--log-level=DEBUG"
           command: 
             - /app/bin/k8s-bigip-ctlr
           env: 

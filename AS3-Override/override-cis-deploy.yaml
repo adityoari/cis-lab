@@ -33,6 +33,7 @@ spec:
             - "--node-label-selector=node-role.kubernetes.io/worker"
             - "--hubmode=false"
             - "--manage-ingress=true"
+            - "--override-as3-declaration=projectone/as3override-cm"
             - "--namespace=projectone"
             - "--log-level=DEBUG"
           command: 
