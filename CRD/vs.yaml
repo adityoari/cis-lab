@@ -1,17 +1,17 @@
 apiVersion: "cis.f5.com/v1"
 kind: VirtualServer
 metadata:
-  name: ngxdcvs-vs
+  name: crd-vs
   labels:
     f5cr: "true"
 spec:
   # This is an insecure virtual, Please use TLSProfile to secure the virtual
   # check out tls examples to understand more.
-  host: host3.com
+  host: crd.aditf5.com
   virtualServerAddress: "10.0.1.7"
   virtualServerHTTPPort: 80
-  virtualServerName: "ngxdcnpvs_vs"
+  virtualServerName: "crd_vs"
   pools:
   - path: /
-    service: ngxdcnp
+    service: myservice
     servicePort: 8080

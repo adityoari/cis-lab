@@ -32,6 +32,7 @@ spec:
             - "--insecure=true"
             - "--custom-resource-mode=true"
             - "--node-label-selector=node-role.kubernetes.io/worker"
+            - "--log-level=DEBUG"
           command: 
             - /app/bin/k8s-bigip-ctlr
           env: 

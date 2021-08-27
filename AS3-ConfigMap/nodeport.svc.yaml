@@ -5,7 +5,7 @@ metadata:
     cis.f5.com/as3-tenant: AS3CM
     cis.f5.com/as3-app: A1
     cis.f5.com/as3-pool: web_pool
-  name: nodeportsvc
+  name: myservice
   namespace: projectone
 spec:
   ports:
