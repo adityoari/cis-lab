@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: f5
   rules:
-  - host: host1.com
+  - host: ing.aditf5.com
     http:
       paths:
       - path: /somepath
