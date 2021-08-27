@@ -9,20 +9,10 @@ metadata:
 spec:
   ingressClassName: f5
   rules:
-  - host: web.aditf5.com
+  - host: host2.com
     http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: ngxdcnp
-            port:
-              number: 8080
-  - host: api.aditf5.com
-    http:
-      paths:
-      - path: /webpath
+      - path: /somepath
         pathType: Prefix
         backend:
           service:
