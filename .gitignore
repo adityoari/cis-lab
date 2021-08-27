@@ -350,5 +350,7 @@ MigrationBackup/
 .ionide/
 
 # Adit custom
+.ssh/
+id_rsa
 .kube/
 *.token.txt
