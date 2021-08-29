@@ -9,13 +9,13 @@ metadata:
 spec:
   ingressClassName: f5
   rules:
-  - host: host2.com
+  - host: as4or.aditf5.com
     http:
       paths:
       - path: /somepath
         pathType: Prefix
         backend:
           service:
-            name: ngxdcnp
+            name: myservice
             port:
               number: 8080

@@ -4,7 +4,7 @@
 
 ![CRD Diagram](../images/CRD.png)
 
-## Steps
+## High-level Flow
 
 1. Admin creates CIS Deployment with BIG-IP Partition name to manage and CRD enabled
 2. Kubernetes creates CIS POD which will monitor the API server

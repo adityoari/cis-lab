@@ -12,7 +12,7 @@ data:
         "declaration": {
             "CIS1": {
                 "Shared": {
-                    "ingress_projectone_ngxdcnp": {
+                    "ingress_projectone_myservice": {
                         "monitors": [ "icmp" ]
                     }
                 }

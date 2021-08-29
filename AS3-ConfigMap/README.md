@@ -4,7 +4,7 @@
 
 ![ConfigMap Diagram](../images/AS3-ConfigMap.png)
 
-## Steps
+## High-level Flow
 
 1. Admin creates CIS Deployment to manage ConfigMap
 2. Kubernetes creates CIS Pod which will monitor the API server

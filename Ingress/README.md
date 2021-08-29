@@ -3,7 +3,7 @@
 ## Diagram
 ![Ingress Diagram](../images/Ingress.png)
 
-## Steps
+## High-level Flow
 
 1. Admin creates CIS Deployment with BIG-IP Partition name to manage
 2. Kubernetes creates CIS POD which will monitor the API server

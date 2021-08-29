@@ -4,7 +4,7 @@
 
 ![AS3 Override Diagram](../images/AS3-Override.png)
 
-## Steps
+## High-level Flow
 
 1. Admin creates CIS Deployment with BIG-IP Partition name to manage and Namespace & name of the AS3 override ConfigMap
 2. Kubernetes creates CIS POD which will monitor the API server
