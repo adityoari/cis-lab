@@ -2,15 +2,17 @@
 
 ## Diagram
 
-![CRD Diagram](../images/CRD.png)
+![CRD VirtualServer Diagram](../images/CRD-Virtual.png)
+
+![CRD VirtualServer Diagram](../images/CRD-Transfer.png)
 
 ## High-level Flow
 
 1. Admin creates CIS Deployment with BIG-IP Partition name to manage and CRD enabled
 2. Kubernetes creates CIS POD which will monitor the API server
-3. Admin creates VS CRD definition with the following details
+3. Admin creates CRD definition with the following details
 
-    * Hostname of the front-end VS
+    * Hostname of the front-end VS (VirtualServer CR only)
     * VS IP address and port
     * VS name
     * Backend Service name
@@ -30,14 +32,14 @@
 7. CIS POD composes AS3 declaration to be pushed to BIG-IP
 
     * Tenant name is the BIG-IP Partition in CIS definition
-    * Endpoint Policy
+    * Endpoint Policy (VirtualServer CR only)
       * Name is composed of CRD information: VS name, VS port, and Hostname
       * Rule to match Hostname
       * Action to select the AS3 Pool
-    * Service HTTP VS
+    * Service HTTP VS (VirtualServer CR) or Service TCP VS (TransportServer CR)
       * Name is composed of VS name and port
       * IP address and port as defined in CRD
-      * Pointer to AS3 Endpoint Policy
+      * Pointer to AS3 Endpoint Policy (VirtualServer CR only)
     * Pool
       * Member service addresses are Kuberenetes nodes
       * Member service port is NodePort of the Service
