@@ -4,7 +4,7 @@
 
 ![CRD VirtualServer Diagram](../images/CRD-Virtual.png)
 
-![CRD VirtualServer Diagram](../images/CRD-Transfer.png)
+![CRD TransportServer Diagram](../images/CRD-Transfer.png)
 
 ## High-level Flow
 
