@@ -2,9 +2,11 @@
 
 ## Diagram
 
+### VirtualServer CR
 ![CRD VirtualServer Diagram](../images/CRD-Virtual.png)
 
-![CRD TransportServer Diagram](../images/CRD-Transfer.png)
+### TransportServer CR
+![CRD TransportServer Diagram](../images/CRD-Transport.png)
 
 ## High-level Flow
 
